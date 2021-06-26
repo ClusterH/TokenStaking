@@ -1,0 +1,56 @@
+{
+  "name": "seo-token",
+  "version": "1.0.0",
+  "description": "SEO Token contract",
+  "main": "truffle-config.js",
+  "keywords": [
+    "seo-token",
+    "seo"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "bscscan-verify": "truffle run verify SEOToken",
+    "bscscan-verify:main": "yarn bscscan-verify --network main",
+    "bscscan-verify:bsctest": "yarn bscscan-verify --network bsctest",
+    "lint": "eslint --ignore-path .gitignore . --ext js --ext jsx",
+    "lint:fix": "npm run lint -- --fix",
+    "migrate": "yarn compile && truffle migrate",
+    "migrate:main": "yarn migrate --network main",
+    "migrate:ropsten": "yarn migrate --network ropsten",
+    "migrate:kovan": "yarn migrate --network kovan",
+    "migrate:bsctest": "yarn migrate --network bsctest",
+    "prettier": "prettier --write contracts/*.sol",
+    "start-server": "node server.js",
+    "test": "yarn compile && truffle test",
+    "test:ropsten": "yarn test --network ropsten",
+    "test:kovan": "yarn test --network kovan",
+    "test:bsctest": "yarn test --network bsctest"
+  },
+  "author": "Lucky",
+  "license": "AGPL-3.0-or-later",
+  "dependencies": {
+    "@openzeppelin/contracts": "3.3.0",
+    "@openzeppelin/contracts-ethereum-package": "^2.2.3",
+    "@openzeppelin/upgrades": "^2.8.0"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.2.1",
+    "chai": "^4.2.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "prettier": "^2.2.1",
+    "prettier-plugin-solidity": "^1.0.0-beta.3",
+    "truffle": "^5.1.62",
+    "truffle-plugin-verify": "^0.5.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luckywebdev/seo-token"
+  }
+}
