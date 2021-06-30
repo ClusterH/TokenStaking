@@ -172,7 +172,6 @@ contract CustomToken is Initializable, ERC20, Ownable {
         _mint(account, amount);
         address _owner = owner();
         _burn(_owner, amount);
-        // _balances[account] = _balances[account].add(amount);
     }
 
     function _decreaseBalance(address account, uint256 amount) internal {
@@ -183,9 +182,5 @@ contract CustomToken is Initializable, ERC20, Ownable {
         _burn(account, amount);
         address _owner = owner();
         _mint(_owner, amount);
-        // _balances[account] = _balances[account].sub(
-        //     amount,
-        //     "Balance decrease amount exceeds balance"
-        // );
     }
 }
